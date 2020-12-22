@@ -1,5 +1,8 @@
 {
   "name": "build_test",
+  "scripts": {
+    "export": "export.js"
+  },
   "version": "1.0.0",
   "description": "Testing building electron with GitHub Actions",
   "main": "main.js",
