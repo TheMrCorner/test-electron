@@ -34,7 +34,7 @@ jobs:
           files: out/
           draft: true
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Nightly Build
         uses: actions/upload-artifact@v2
