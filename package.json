@@ -8,5 +8,10 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^11.1.1"
+  },
+  "dependencies": {
+    "bestzip": "^2.1.7",
+    "electron-builder": "^22.9.1",
+    "ora": "^5.1.0"
   }
 }

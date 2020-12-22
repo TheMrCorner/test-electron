@@ -1,0 +1,44 @@
+name: Build test-app
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    name: Build test-app
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+      
+    steps: 
+      - uses: actions/checkout@v2
+
+      - name: SetUp NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build 
+        run: yarn export
+
+      - name: Upload builds to release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          files: out/*.*
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Nightly Build
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: test-app-nightly
+          path: out/**/*!(.zip)

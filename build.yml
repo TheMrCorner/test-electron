@@ -1,0 +1,28 @@
+appId: com.<your name>.<your app name in lower case, without spaces>
+productName: <your app name>
+directories:
+  input: app
+  output: out
+
+mac:
+  category: Test
+   target:
+    - dmg
+    - mas
+  icon: public/images/favicon.icns
+
+win:
+  target:
+    - portable
+    - squirrel
+squirrelWindows:
+  remoteReleases: true
+
+linux:
+  target:
+    - snap
+    - deb
+    - rpm
+    - pacman
+  synopsis: A testing app for Electron builds using GitHub Actions
+  category: Test
