@@ -1,7 +1,7 @@
 {
   "name": "build_test",
   "scripts": {
-    "export": "node export.js"
+    "export": "node export.js -w"
   },
   "version": "1.0.0",
   "description": "Testing building electron with GitHub Actions",
