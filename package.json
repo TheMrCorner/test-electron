@@ -12,6 +12,7 @@
   "dependencies": {
     "bestzip": "^2.1.7",
     "electron-builder": "^22.9.1",
+    "export": "^0.1.337",
     "ora": "^5.1.0"
   }
 }
