@@ -1,7 +1,6 @@
-appId: com.<your name>.<your app name in lower case, without spaces>
-productName: <your app name>
+appId: com.alpermar.crossplatform_test
+productName: test
 directories:
-  input: app
   output: out
 
 mac:
@@ -9,7 +8,6 @@ mac:
    target:
     - dmg
     - mas
-  icon: public/images/favicon.icns
 
 win:
   target:
