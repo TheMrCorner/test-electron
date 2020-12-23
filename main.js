@@ -2,6 +2,8 @@
 const { app, BrowserWindow, ipcMain, Notification } = require("electron");
 const path = require("path");
 
+var a = 1;
+
 const loadMainWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 1200,
