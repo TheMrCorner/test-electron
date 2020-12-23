@@ -3,7 +3,7 @@
   "scripts": {
     "export": "node export.js -w"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Testing building electron with GitHub Actions",
   "main": "main.js",
   "repository": "https://github.com/TheMrCorner/test-electron.git",
