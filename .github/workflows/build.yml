@@ -4,11 +4,7 @@ on: push
 
 jobs:
   release:
-    runs-on: ${{ matrix.os, ARM, ARM64 }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: [macos, linux, windows, ARM64, ARM]
 
     steps:
       - name: Check out Git repository
