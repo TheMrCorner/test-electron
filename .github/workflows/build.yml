@@ -4,7 +4,7 @@ on: push
 
 jobs:
   release:
-    runs-on: ${{ matrix.os }, ARM, ARM64}
+    runs-on: ${{ matrix.os, ARM, ARM64 }}
 
     strategy:
       matrix:
