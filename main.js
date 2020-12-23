@@ -14,7 +14,7 @@ const loadMainWindow = () => {
     });
 
     mainWindow.webContents.openDevTools()
-    mainWindow.loadFile(path.join(__dirname, "app/index.html"));
+    mainWindow.loadFile(path.join(__dirname, "index.html"));
 } // loadMainWindow
 
 // Loads the main window when the app just initializes and
